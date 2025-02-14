@@ -1,16 +1,14 @@
 - Exercise 3: JavaScript Basics
   
-- Name:
-//Adrian Jarelle V. Rivera
+- Name: Adrian Jarelle V. Rivera
 
-- Challenges Encountered:
-// I had trouble in figuring out how to check if the password have an uppercase, lowercase, and numeric at the same time. I used .some() method and .test() in order
-// (need some changes in the validatePassword function, add a typechecking function, also in the reverseString function, return false if password is not a string)
+- Challenges Encountered: I had trouble in figuring out how to check if the password have an uppercase, lowercase, and numeric at the same time. I used .some() method and .test() in order to check the cases.
+- (need some changes in the validatePassword function, add a typechecking function, also in the reverseString function, return false if password is not a string)
 
 
 - References:
-// https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
-// https://www.geeksforgeeks.org/how-to-check-case-of-letter-in-javascript/
+> https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
+> https://www.geeksforgeeks.org/how-to-check-case-of-letter-in-javascript/
 
 
 
