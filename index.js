@@ -35,4 +35,16 @@ console.log(validatePassword("hello1234", "hello1234"));
 console.log(validatePassword("Hello1234", "Hello1234"));
 console.log(validatePassword("HELLO1234", "HELLO1234"));
 
+function reverseString(s1){
+    var reversed = ""; // empty string
+
+    for(var i = s1.length - 1; i >= 0; i--){ // Decrementing to access and populate the reversed string
+        reversed += s1[i] // first run: sample case s1 = hello, i = 4 reversed = o
+    }
+    return reversed
+}
+
+// Test case
+console.log((reverseString("hello")))
+
 
