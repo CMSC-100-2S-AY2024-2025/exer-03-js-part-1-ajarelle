@@ -47,4 +47,24 @@ function reverseString(s1){
 // Test case
 console.log((reverseString("hello")))
 
+function storePassword(name, pass1, pass2){
+
+    var newpass = {}; // Empty object
+
+    if (validatePassword(pass1,pass2)) { // checks if the 2 passwords match
+        newpass.name = name;
+        newpass.newpassword = reverseString(pass1);
+        return newpass;
+
+    } else 
+    
+    newpass.name = name;
+    newpass.newpassword = pass1;
+    
+    return newpass;
+
+}
+
+console.log(storePassword("John", "Pass1234", "Pass1234"));
+console.log(storePassword("John", "Pass123", "Pass12345"));
 
