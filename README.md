@@ -6,8 +6,8 @@ Name: **Adrian Jarelle V. Rivera**
 
 
 >**References:**
-> https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
-> https://www.geeksforgeeks.org/how-to-check-case-of-letter-in-javascript/
+> - https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
+> - https://www.geeksforgeeks.org/how-to-check-case-of-letter-in-javascript/
 
 
 
