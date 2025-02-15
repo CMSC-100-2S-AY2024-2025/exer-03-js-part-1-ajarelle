@@ -1,3 +1,6 @@
+
+
+
 // Exercise 3: Basics
 // Adrian Jarelle V. Rivera
 // Description:
@@ -10,6 +13,11 @@
 
 
 function validatePassword(pass1, pass2){
+    if (typeof(pass1) !== 'string' || typeof(pass2) !== 'string'){
+
+        return false;
+
+    }
     
     if (pass1 !== pass2) { // Checks if the two passwords are equal
         return false;
@@ -36,6 +44,8 @@ console.log(validatePassword("Hello1234", "Hello1234"));
 console.log(validatePassword("HELLO1234", "HELLO1234"));
 
 function reverseString(s1){
+    if (typeof(s1) !== 'string') return "";
+
     var reversed = ""; // empty string
 
     for(var i = s1.length - 1; i >= 0; i--){ // Decrementing to access and populate the reversed string
@@ -65,6 +75,6 @@ function storePassword(name, pass1, pass2){
 
 }
 
-console.log(storePassword("John", "Pass1234", "Pass1234"));
+console.log(storePassword("John", Pass1234, "Pass1234"));
 console.log(storePassword("John", "Pass123", "Pass12345"));
 
