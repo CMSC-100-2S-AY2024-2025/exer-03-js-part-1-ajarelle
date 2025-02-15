@@ -1,6 +1,3 @@
-
-
-
 // Exercise 3: Basics
 // Adrian Jarelle V. Rivera
 // Description:
@@ -13,38 +10,32 @@
 
 
 function validatePassword(pass1, pass2){
-    if (typeof(pass1) !== 'string' || typeof(pass2) !== 'string'){
+    if (typeof pass1 !== 'string' || typeof pass2 !== 'string') return false;
+    if (pass1 !== pass2) return false; // Checks if the two passwords are equal
+    if (pass1.length < 8)  return false;// checks if their is at least 8 characters
+       
+    let hasUpper = false, hasLower = false, hasNumeric = false;
 
-        return false;
-
-    }
-    
-    if (pass1 !== pass2) { // Checks if the two passwords are equal
-        return false;
-    }
-
-    if (pass1.length < 8) { // checks if their is at least 8 characters
-        return false;
+    for (let char of pass1){
+        if (char >= 'A' && char <= 'Z') hasUpper = true;
+        if (char >= 'a' && char <= 'z') hasLower = true;
+        if (char >= '0' && char <= '9') hasNumeric = true;
     }
 
-    const chars = pass1.split(""); // splits the password into an array
- 
-    const hasUpper = chars.some(char => /[A-Z]/.test(char)); // Checks the password array if it has an Uppercase Letter
-    const hasLower = chars.some(char => /[a-z]/.test(char)); // Checks the password array if it has a Lowercase Letter
-    const hasNumeric = chars.some(char => !isNaN(char) && char !== " "); // Checks if the password array has numeric 
-
-    return hasUpper && hasLower && hasNumeric; 
+    return hasUpper && hasLower && hasNumeric;   
+     
 }
 
 // Sample Cases
 console.log(validatePassword("helloworld", "hello"));
 console.log(validatePassword("hello", "hello"));
-console.log(validatePassword("hello1234", "hello1234"));
 console.log(validatePassword("Hello1234", "Hello1234"));
+console.log(validatePassword(1234, '1023040'));
 console.log(validatePassword("HELLO1234", "HELLO1234"));
 
 function reverseString(s1){
-    if (typeof(s1) !== 'string') return "";
+
+    if (typeof s1 !== 'string') return "";
 
     var reversed = ""; // empty string
 
@@ -55,7 +46,8 @@ function reverseString(s1){
 }
 
 // Test case
-console.log((reverseString("hello")))
+console.log((reverseString("hello")));
+console.log((reverseString(123)))
 
 function storePassword(name, pass1, pass2){
 
@@ -75,6 +67,6 @@ function storePassword(name, pass1, pass2){
 
 }
 
-console.log(storePassword("John", Pass1234, "Pass1234"));
-console.log(storePassword("John", "Pass123", "Pass12345"));
+console.log(storePassword("John", 1234, "Pass1234"));
+console.log(storePassword("John", "Pass1234", "Pass1234"));
 
